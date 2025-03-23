@@ -1,0 +1,12 @@
+<div class="features-container">
+    <div class="feature-card" *ngFor="let feature of features">
+      <div class="card-inner">
+        <div class="card-front">
+          <span class="icon">{{ feature.icon }}</span>
+        </div>
+        <div class="card-back">
+          <p>{{ feature.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,79 @@
+/* Global Styling */
+.home-container {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.cta-button {
+  background: white;
+  color: #007bff;
+  padding: 12px 25px;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+  color: white;
+}
+
+/* About Section */
+.about {
+  margin: 40px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Features Section */
+.features {
+  margin: 40px 0;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.feature-icon {
+  font-size: 2em;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 8px;
+}

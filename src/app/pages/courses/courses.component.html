@@ -1,0 +1,18 @@
+<div class="courses-container">
+  <h2 class="section-title">Explore Our Courses</h2>
+  <div class="courses-grid">
+    <div class="course-card" *ngFor="let course of courses">
+      <div class="course-image">
+        <img [src]="course.image" alt="{{ course.title }}">
+      </div>
+      <div class="course-content">
+        <h3 class="course-title">{{ course.title }}</h3>
+        <p class="course-description">{{ course.description }}</p>
+        <div class="course-footer">
+          <span class="course-price">{{ course.price }}</span>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

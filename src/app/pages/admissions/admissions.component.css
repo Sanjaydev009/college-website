@@ -1,0 +1,94 @@
+.admissions {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 127px;
+}
+
+.admission-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.admission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.coming-soon {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.available-now {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.info-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.table {
+  margin-top: 10px;
+}
+
+.contact-box {
+  text-align: center;
+}
+
+.contact-box p {
+  margin: 5px 0;
+}
+
+.apply-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #0056b3;
+}

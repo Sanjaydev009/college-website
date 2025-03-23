@@ -1,0 +1,41 @@
+<div class="contact-container">
+    <!-- Contact Info Section -->
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Reach out to us and we'll respond as soon as possible.</p>
+        <p><strong>📞 Phone:</strong> +91 88858 94569</p>
+        <p><strong>📧 Email:</strong> connect"&#64;"heysite.biz</p>
+        <p><strong>📍 Address:</strong> 1901, DLF, Hyderabad, India 512301</p>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+        <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
+            <label>Full Name</label>
+            <input type="text" formControlName="fullName" placeholder="Enter your full name">
+            <div *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched" class="error">
+                Name is required (Min: 3 characters)
+            </div>
+
+            <label>Email</label>
+            <input type="email" formControlName="email" placeholder="Enter your email">
+            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
+                Enter a valid email
+            </div>
+
+            <label>Phone Number</label>
+            <input type="text" formControlName="phone" placeholder="Enter your phone number">
+            <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="error">
+                Enter a valid 10-digit phone number
+            </div>
+
+            <label>Message</label>
+            <textarea formControlName="message" placeholder="Write your message..."></textarea>
+            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
+                Message must be at least 10 characters
+            </div>
+
+            <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+        </form>
+    </div>
+</div>

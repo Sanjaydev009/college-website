@@ -1,0 +1,24 @@
+<div class="noticeboard-container">
+  <!-- Left: Big Noticeboard (Scrolling Notices) -->
+  <div class="notice-content">
+    <h2 class="notice-title">📢 Notices - {{ selectedCategory | titlecase }}</h2>
+
+    <div class="notice-scroll">
+      <app-notice-item *ngFor="let notice of filteredNotices; let i = index"
+                      [notice]="notice"
+                      [class.active]="i === scrollIndex"></app-notice-item>
+    </div>
+    
+    <div *ngIf="filteredNotices.length === 0" class="no-notice">No notices available.</div>
+  </div>
+
+  <!-- Right: Category Selection -->
+  <div class="category-sidebar">
+    <button *ngFor="let category of categories"
+            class="category-btn"
+            [class.active]="selectedCategory === category.key"
+            (click)="filterNotices(category.key)">
+      {{ category.name }}
+    </button>
+  </div>
+</div>

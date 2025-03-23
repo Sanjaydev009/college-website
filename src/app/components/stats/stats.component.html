@@ -1,0 +1,10 @@
+<div class="stats-container">
+    <div class="stat-card" *ngFor="let stat of stats">
+      <div class="stat-overlay"></div>
+      <img [src]="stat.image" class="stat-bg" alt="Stat Background">
+      <div class="stat-content">
+        <h2 class="stat-percentage">{{ stat.percentage }}</h2>
+        <p class="stat-description">{{ stat.description }}</p>
+      </div>
+    </div>
+  </div>

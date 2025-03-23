@@ -1,0 +1,28 @@
+.ticker-wrapper {
+    width: 100%;
+    background: #ffcc00;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    margin-top: 127px;
+  }
+  
+  .ticker {
+    display: flex;
+    width: max-content;
+    animation: ticker-scroll 15s linear infinite;
+  }
+  
+  .ticker-item {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding: 0 40px;
+    display: inline-block;
+  }
+  
+  @keyframes ticker-scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }

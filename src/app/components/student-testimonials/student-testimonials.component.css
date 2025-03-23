@@ -1,0 +1,104 @@
+/* Section Container */
+.testimonials-container {
+    padding: 50px 0;
+    background-color: #f0f4f8;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Title */
+  .section-title {
+    font-size: 28px;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Scrolling Container */
+  .scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Scrolling Wrapper */
+  .scrolling-wrapper {
+    display: flex;
+    gap: 20px;
+    animation: scroll 15s linear infinite;
+    width: fit-content;
+    padding: 20px 0;
+  }
+  
+  /* Testimonial Card */
+  .testimonial-card {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.8;
+  }
+  
+  /* Hover Effect */
+  .testimonial-card:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card Content */
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    margin: auto;
+  }
+  
+  /* Image */
+  .testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Review Text */
+  .review {
+    font-size: 16px;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  /* Name */
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+  }
+  
+  /* Course */
+  .course {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Continuous Scrolling Animation */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }

@@ -1,0 +1,36 @@
+.noticeboard-container {
+  display: flex;
+  gap: 10px;
+}
+
+.notice-content {
+  flex: 3;
+  padding: 10px;
+}
+
+.notice-scroll {
+  height: 150px;
+  overflow: hidden;
+}
+
+.notice-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+
+.category-sidebar {
+  flex: 1;
+}
+
+.category-btn {
+  display: block;
+  margin: 5px 0;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.no-notice {
+  color: red;
+  font-weight: bold;
+}

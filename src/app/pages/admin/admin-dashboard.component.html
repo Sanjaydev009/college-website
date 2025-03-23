@@ -1,0 +1,30 @@
+<div class="admin-dashboard-container">
+    <h2>Admin Dashboard</h2>
+    <button class="btn btn-secondary logout-btn" (click)="logout()">Logout</button>
+    
+    <div class="form-container">
+      <form [formGroup]="noticeForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="title">Notice Title</label>
+          <input id="title" type="text" formControlName="title" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="content">Notice Content</label>
+          <textarea id="content" formControlName="content" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          {{ editing ? 'Update Notice' : 'Add Notice' }}
+        </button>
+      </form>
+    </div>
+  
+    <div class="notices-list">
+      <h3>Existing Notices</h3>
+      <div *ngFor="let notice of notices" class="notice-item">
+        <h4>{{ notice.title }}</h4>
+        <p>{{ notice.content }}</p>
+        <button class="btn btn-warning btn-sm" (click)="onEdit(notice)">Edit</button>
+        <button class="btn btn-danger btn-sm" (click)="onDelete(notice.id)">Delete</button>
+      </div>
+    </div>
+  </div>

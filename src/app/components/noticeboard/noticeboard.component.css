@@ -1,0 +1,131 @@
+/* Noticeboard Container - Modern Look */
+.noticeboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;  /* Increased width */
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.95); /* Glass effect */
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  margin-top: 127px;
+}
+
+/* Left Section - Notice List */
+.notice-content {
+  flex: 3;
+  padding: 30px;
+  background: white;
+  border-right: 3px solid #ddd;
+  overflow: hidden;
+}
+
+/* Noticeboard Title */
+.notice-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Notice Scrolling Section */
+.notice-scroll {
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Individual Notice Item */
+app-notice-item {
+  display: block;
+  padding: 20px;
+  margin: 15px 0;
+  background: #f9f9f9;
+  border-left: 6px solid #007bff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  animation: slideUp 5s linear infinite;
+}
+
+/* Highlighting Active Notice */
+app-notice-item.active {
+  transform: scale(1.06);
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Auto-Scroll Effect */
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-30px); }
+}
+
+/* Sidebar: Categories & Filters */
+.category-sidebar {
+  flex: 1;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Category Buttons */
+.category-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background: white;
+  color: #007bff;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .noticeboard-container {
+      flex-direction: column;
+      width: 90%;
+  }
+
+  .category-sidebar {
+      flex-direction: row;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px;
+  }
+
+  .category-btn {
+      font-size: 14px;
+      padding: 10px;
+  }
+}

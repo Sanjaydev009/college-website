@@ -1,0 +1,25 @@
+<div class="testimonials-container">
+    <h2 class="section-title">What Professionals Say About Us</h2>
+  
+    <div class="scrolling-container">
+      <div class="scrolling-wrapper">
+        <div *ngFor="let testimonial of testimonials" class="testimonial-card">
+          <div class="card-content">
+            <img [src]="testimonial.image" class="testimonial-img" alt="{{ testimonial.name }}">
+            <p class="review">"{{ testimonial.review }}"</p>
+            <h5 class="name">{{ testimonial.name }}</h5>
+            <p class="position">{{ testimonial.position }}</p>
+          </div>
+        </div>
+        <!-- Duplicate items for smooth scrolling -->
+        <div *ngFor="let testimonial of testimonials" class="testimonial-card">
+          <div class="card-content">
+            <img [src]="testimonial.image" class="testimonial-img" alt="{{ testimonial.name }}">
+            <p class="review">"{{ testimonial.review }}"</p>
+            <h5 class="name">{{ testimonial.name }}</h5>
+            <p class="position">{{ testimonial.position }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

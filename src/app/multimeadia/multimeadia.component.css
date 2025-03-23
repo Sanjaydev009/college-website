@@ -1,0 +1,31 @@
+.carousel-item img, 
+.carousel-item video {
+    width: 100%;
+    height: 650px; /* Increased height for a bigger view */
+    object-fit: cover; /* Ensures images/videos fill the space properly */
+}
+
+.carousel-inner {
+    height: 650px; /* Matches the image height */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) { 
+    .carousel-item img, 
+    .carousel-item video {
+        height: 500px; /* Slightly smaller for tablets */
+    }
+    .carousel-inner {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item img, 
+    .carousel-item video {
+        height: 400px; /* Adjusted height for mobile */
+    }
+    .carousel-inner {
+        height: 400px;
+    }
+}

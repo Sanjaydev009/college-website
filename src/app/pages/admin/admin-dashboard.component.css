@@ -1,0 +1,27 @@
+.admin-dashboard-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fdfdfd;
+    margin-top: 127px;
+  }
+  .logout-btn {
+    float: right;
+    margin-bottom: 20px;
+  }
+  .form-container {
+    margin-bottom: 30px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .notices-list .notice-item {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  .notices-list .notice-item:last-child {
+    border-bottom: none;
+  }

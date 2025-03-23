@@ -1,0 +1,49 @@
+<div class="about-container">
+    <div class="about-content">
+      <h1 class="about-title">Shaping Future Leaders</h1>
+      <p class="about-text">
+        Aurora stands at the forefront of India's new-age multidisciplinary universities, dedicated to academic 
+        excellence and innovation. Our globally recognized faculty, state-of-the-art curriculum, and strong 
+        industry integration ensure that our graduates are equipped to lead and inspire.
+      </p>
+  
+      <div class="stats">
+        <div class="stat-box">
+          <h2 class="stat-number">{{ years }}+</h2>
+          <p class="stat-label">Years of Excellence</p>
+          <div class="progress-bar"><div class="progress" [style.width.%]="(years / 35) * 100"></div></div>
+        </div>
+        <div class="stat-box">
+          <h2 class="stat-number">{{ institutions }}</h2>
+          <p class="stat-label">Institutions</p>
+          <div class="progress-bar"><div class="progress" [style.width.%]="(institutions / 30) * 100"></div></div>
+        </div>
+        <div class="stat-box">
+          <h2 class="stat-number">{{ alumni | number }}</h2>
+          <p class="stat-label">Alumni Network</p>
+          <div class="progress-bar"><div class="progress" [style.width.%]="(alumni / 160000) * 100"></div></div>
+        </div>
+      </div>
+
+      <button class="explore-btn" (click)="toggleExploreMore()">
+        {{ isExpanded ? 'Show Less' : 'Explore More →' }}
+      </button>
+  
+      <div class="explore-section" *ngIf="isExpanded">
+        <h2 class="about-subtitle">Why Choose Aurora University?</h2>
+        <ul class="benefits-list">
+          <li>🏆 Academic Excellence with a future-ready curriculum.</li>
+          <li>🎓 Renowned faculty and industry experts.</li>
+          <li>🏛️ State-of-the-art infrastructure and research labs.</li>
+          <li>🌍 Global alumni network with {{ alumni | number }}+ professionals.</li>
+          <li>🚀 Strong focus on innovation, entrepreneurship, and career success.</li>
+        </ul>
+      </div>
+
+    </div>
+    
+  
+    <div class="about-image">
+      <img src="assets/student.jpg" alt="Student" class="student-img">
+    </div>
+  </div>

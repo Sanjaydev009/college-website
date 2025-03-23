@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<!-- Show only on Home Page -->
+<div *ngIf="isHomePage">
+  <app-news></app-news>
+  <app-multimeadia></app-multimeadia>
+  <app-about-us></app-about-us>
+  <app-stats></app-stats>
+  <app-noticeboard></app-noticeboard>
+  <app-features></app-features>
+  <app-testimonials></app-testimonials>
+  <app-student-testimonials></app-student-testimonials>
+</div>
+
+<!-- Show Router Outlet only if not on Home Page -->
+<router-outlet *ngIf="!isHomePage"></router-outlet>
+
+<app-footer></app-footer>

@@ -1,0 +1,127 @@
+/* Main Container */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 50px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  }
+  
+  /* Content Section */
+  .about-content {
+    max-width: 600px;
+  }
+  
+  .about-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* Statistics */
+  .stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .stat-box {
+    text-align: center;
+    position: relative;
+  }
+  
+  .stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1d3557;
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    width: 100px;
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 8px auto;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #2312a2;
+    transition: width 2s ease-in-out;
+  }
+  
+  .explore-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #2a01a4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .explore-btn:hover {
+    background: #7b5fe0;
+  }
+  
+  .explore-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  /* Image Section */
+  .about-image {
+    flex: 1;
+  }
+  
+  .student-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .student-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+    }
+    
+    .stats {
+      justify-content: center;
+    }
+  }

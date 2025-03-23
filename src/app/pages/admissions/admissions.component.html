@@ -1,0 +1,66 @@
+<section class="admissions container py-5">
+  <h2 class="text-center fw-bold">📢 Admissions Open for 2025</h2>
+  <p class="text-center text-muted">Follow the admission process below to secure your seat.</p>
+
+  <!-- Admission Steps -->
+  <div class="row mt-4">
+      <div class="col-md-4" *ngFor="let step of admissionSteps">
+          <div class="admission-card">
+              <span class="icon">{{ step.icon }}</span>
+              <h4>{{ step.title }}</h4>
+              <p>{{ step.description }}</p>
+              <span *ngIf="step.status" class="status {{ step.status === 'Coming Soon' ? 'coming-soon' : 'available-now' }}">
+                  {{ step.status }}
+              </span>
+          </div>
+      </div>
+  </div>
+
+  <!-- Eligibility Criteria -->
+  <div class="info-section">
+      <h3>📌 Eligibility Criteria</h3>
+      <ul>
+          <li *ngFor="let criteria of eligibilityCriteria">{{ criteria }}</li>
+      </ul>
+  </div>
+
+  <!-- Required Documents -->
+  <div class="info-section">
+      <h3>📝 Required Documents</h3>
+      <ul>
+          <li *ngFor="let doc of requiredDocuments">{{ doc }}</li>
+      </ul>
+  </div>
+
+  <!-- Fee Structure -->
+  <div class="info-section">
+      <h3>💰 Fee Structure</h3>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Course</th>
+                  <th>Annual Fee</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let fee of feeStructure">
+                  <td>{{ fee.course }}</td>
+                  <td>{{ fee.fee }}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+  <!-- Contact Information -->
+  <div class="info-section contact-box">
+      <h3>📞 Contact Us</h3>
+      <p><strong>Phone:</strong> {{ contactDetails.phone }}</p>
+      <p><strong>Email:</strong> <a href="mailto:{{ contactDetails.email }}">{{ contactDetails.email }}</a></p>
+      <p><strong>Address:</strong> {{ contactDetails.address }}</p>
+  </div>
+
+  <!-- Apply Now Button -->
+  <div class="text-center mt-4">
+      <a href="/apply-now" class="btn btn-primary btn-lg apply-btn">Apply Now</a>
+  </div>
+</section>

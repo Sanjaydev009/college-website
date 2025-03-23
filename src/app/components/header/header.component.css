@@ -1,0 +1,75 @@
+/* Fixed Header */
+.header {
+  background: linear-gradient(to right, #1a237e, #283593);
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Keeps the header on top */
+}
+
+/* Push content down to avoid overlap */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  margin-top: 90px; /* Push the content down */
+}
+
+/* Navbar Styling */
+.logo {
+  height: 70px;
+  border-radius: 5px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin: 0 10px;
+  padding: 8px 15px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #e5cb85 !important;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .header {
+      padding: 10px 0;
+  }
+
+  .logo {
+      height: 50px;
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+      display: block;
+      width: 100%;
+      padding: 10px;
+  }
+
+  .main-content {
+      margin-top: 70px; /* Reduce margin for smaller screens */
+  }
+}

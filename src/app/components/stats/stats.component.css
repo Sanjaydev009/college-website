@@ -1,0 +1,89 @@
+/* Main Container */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Card */
+  .stat-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Background Image */
+  .stat-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  /* Overlay */
+  .stat-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.4s ease-in-out;
+  }
+  
+  /* Content */
+  .stat-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Percentage Text */
+  .stat-percentage {
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Description Text */
+  .stat-description {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Hover Effects */
+  .stat-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .stat-card:hover .stat-bg {
+    transform: scale(1.1);
+    filter: brightness(70%);
+  }
+  
+  .stat-card:hover .stat-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .stat-card:hover .stat-percentage {
+    transform: scale(1.2);
+  }
+  
+  .stat-card:hover .stat-description {
+    opacity: 0.9;
+  }

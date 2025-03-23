@@ -1,0 +1,33 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero">
+      <h1>Welcome to Our Website</h1>
+      <p>Providing the best services with modern technology.</p>
+      <button class="cta-button">Get Started</button>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+      <h2>About Us</h2>
+      <p>We are dedicated to providing high-quality solutions that make your life easier.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+      <h2>Why Choose Us?</h2>
+      <div class="features-grid">
+          <div class="feature-card" *ngFor="let feature of features">
+              <span class="feature-icon">{{ feature.icon }}</span>
+              <h3>{{ feature.title }}</h3>
+              <p>{{ feature.description }}</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+      <h2>Ready to Start?</h2>
+      <p>Join us today and experience the best services.</p>
+      <button class="cta-button">Explore More</button>
+  </section>
+</div>

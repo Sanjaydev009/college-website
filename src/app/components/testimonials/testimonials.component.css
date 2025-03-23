@@ -1,0 +1,119 @@
+/* Section Container */
+.testimonials-container {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+    overflow: hidden; /* Prevents overflow issues */
+    width: 100%;
+  }
+  
+  /* Title */
+  .section-title {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Scrolling Container */
+  .scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Scrolling Wrapper */
+  .scrolling-wrapper {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+    width: fit-content;
+    padding: 20px 0;
+  }
+  
+  /* Testimonial Card */
+  .testimonial-card {
+    flex: 0 0 300px; /* Fixed width to keep inside box */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.8;
+  }
+  
+  /* Hover Effect */
+  .testimonial-card:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card Content */
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px; /* Prevents text from overflowing */
+    margin: auto;
+  }
+  
+  /* Image */
+  .testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  
+  /* Review Text */
+  .review {
+    font-size: 14px;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 90%;
+  }
+  
+  /* Name */
+  .name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Position */
+  .position {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Continuous Scrolling Animation */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .scrolling-wrapper {
+      flex-direction: row;
+      animation: scroll 25s linear infinite;
+    }
+  
+    .testimonial-card {
+      flex: 0 0 250px; /* Adjust card width for small screens */
+    }
+  }
